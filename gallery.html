@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+  <header>
+
+    <div class="navbar">
+
+      <img src="/images/iusa_200x200.79435567_fem0.jpeg" alt="Trippydraws planet Logo">
+
+
+
+      <nav>
+
+        <a href="index.html" class="selected"> Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+
+
+      </nav>
+    </div>
+
+    <div class="spacer layer1">
+    </div>
+
+  </header>
+
+<!-- For my gallery i wanted to show off my clients many mediums in which she creates and designs her art.
+ I created 3 sections each showing a different facet of her skills. To add interactivity i implemented a 
+ subtle zoom when hovering, and a pop up function that gives viewers a better look at any single image of
+  my clients art that they wish with just a click. The popup window minimises all other visual information
+   to give the art time to shine alone. The x can be clicked at any time to go back to the gallery. -->
+
+  <div class="container">
+
+
+    <h1>Murals</h1>
+    <div class="mural-container">
+      <div class="image"><img src="images/mural_1.webp" alt="bunny mural, Artist standing next to psychadelic mural with stripes of vibrant colours and bunnies"></div>
+      <div class="image"><img src="images/mural_2.webp" alt="milkshake mural, Artsit standing next to rainbow mural. has intricate swirling design with a pink milkshake"></div>
+      <div class="image"><img src="images/mural_3.webp" alt="smiley mural, tye dye style bar mural with smiley faces, swirls and stars under a blue light"></div>
+      <div class="image"><img src="images/mural_4.webp" alt="kirby mural, Room mural with psychadelic colours and squiggles with videogame character kirby"></div>
+      <div class="image"><img src="images/mural_5.webp" alt="peace sign mural, Artsit sitting on floor kitchen mural with all surfaces covered in patterns and bright psychadelic colours with a multicolour peace sign above the sink"></div>
+      <div class="image"><img src="images/mural_6.webp " alt="dino abduction mural, Artist sitting infront of a psychadleic mural of a green dinosaur getting abducted by alien space ship with rainbow squiggles and mushrooms"></div>
+    </div>
+
+
+    <div class="row">
+      <div class="column">
+        <h1>Collaborations</h1>
+
+        <div class="collabs-container">
+          <div class="image"><img src="images/Chillboxtrippydraws.png" alt="Trippydraws x Chillbo collaboration box with multicolour swirl design"></div>
+          <div class="image"><img src="images/space_dust_snowboard.webp" alt="Trippydraws x Gilson snowboard, snowboard with intricate multicoloured psychadelic design with various space themed symbols, one side has wood grain texture and large gilson logo in black bold text"></div>
+          <div class="image"><img src="images/trippy_skis.webp" alt="Trippydraws x Gilson skis, Skis with a saturated tye dye design with mushrooms and black gilson branding text"></div>
+          <div class="image"><img src="images/trippy_snowboard.webp" alt="Trippydraws Snowboard, Snowboard with a saturated tye dye design with mushrooms and black trippydraws logo and branding text "></div>
+          <div class="image"><img src="images/trippydraws_skateboard_1.webp" alt="Trippydraws skateboard with a saturated tye dye design with mushrooms and black trippydraws logo and gilson x trippydraws text" ></div>
+
+        </div>
+        <div class="column">
+          <h1>Prints</h1>
+          <div class="prints-container">
+            <div class="image"><img src="images/print1.webp" alt="Trippydraws psychadelic astronaut print with multicoloured psychadelic squiggles in space with planets and stars"></div>
+            <div class="image"><img src="images/print2.webp" alt="Trippydraws Smiley Print yellow and purple paint pour design with black mushrooms and smiley face with tongue out in the centre"></div>
+            <div class="image"><img src="images/print_3.webp" alt="Trippydraws Butterfly print with rainbow paint pour design with planets and moons"></div>
+            <div class="image"><img src="images/print_4.webp" alt="Trippydraws black and white paint pour design with mushrooms in the middle with text saying 'stay safe' "></div>
+            <div class="image"><img src="images/print_5.webp" alt="Trippydraws Alien print alien with hand print on forhead with space mushrooms and yin yang symbols"></div>
+            <div class="image"><img src="images/print_6.webp" alt="Trippydraws Sticker pack of various peace, alien, space and psychadelic designs"></div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-image">
+        <span>&times;</span>
+        <img src="popup_image" alt="">
+        <!-- While doing external research, it was noted in the tutorial that while having empty divs is generally not good practice.
+          In this case its acceptable to make sure my pop up functions correctly after selecting an image. -->
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="footerContainer">
+      <div class="socialIcons">
+        <a href="https://www.facebook.com/p/Trippydraws-art-100059533240684/"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/trippydraws"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@trippydraws"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="footerNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footerBottom">
+      <p>Copyright &copy;2025</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".image img").forEach(image => {
+      image.onclick = () => {
+        document.querySelector(".popup-image").style.display = "block";
+        document.querySelector(".popup-image img").src =
+          image.getAttribute("src");
+      };
+    });
+
+    document.querySelector(".popup-image span").onclick = () => {
+      document.querySelector(".popup-image").style.display = "none";
+    };
+  </script>
+  <!-- to implement the popup interactivity, i also utilised javascript to script the poppup only to appear when clicked -->
+
+
+
+</body>
+
+
+</html>

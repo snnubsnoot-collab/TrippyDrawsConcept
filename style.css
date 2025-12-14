@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* universal code that makes sure theres no white space around my pages */
+/* throughout my stylesheet ive considered people with visual impairments by making sure all text is large enough to be read an adequate distance away for people with nearsightedness such as myself and is a high contrasting value compared to the backgrounds to further increase legibility */
+
+
+
+.navbar {
+  width: 100%;
+  background-image: url(images/AdobeStock_353024251-01.svg);
+  background-position: center;
+  background-size: contain;
+  font-family: "Truculenta", sans-serif;
+  padding-bottom: 50px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  align-items: center;
+  background-repeat: repeat-x;
+}
+
+/* I chose to give my site a trippy, space aesthetic that aligns with my clients style that utilises space imagery and bright colours.The darker background gives a good contrast to all my elements and makes my text easy to read for people with visual impairments*/
+
+.navbar a {
+  float: right;
+  text-align: center;
+  padding: 15px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 30px;
+
+}
+
+/* Navbar hyperlinks are in white to keep with the high-contrast visuals. The font i chose for my header text wsas Truculenta. 
+This sans-serif font is large and bold which is great for bringing attention to my headers.*/
+.navbar a:hover {
+  background-color: #1b7fdd;
+  border-radius: 46% 54% 68% 32% / 30% 49% 51% 70%;
+  transition: .3s;
+
+}
+
+/* I added a hover property to my hyperlinks that add an asymmetrical blue border whenever hovered over.
+   I created these borders using an online tool that converts a blob puppet into a border radius value
+   I added a 0.3 second transition as well as an ease in to make sure it wasnt too fast and is appealing to 
+   the eye*/
+
+header img {
+  height: 10vh;
+  padding-left: 40px;
+  padding-top: 20px;
+  border-radius: 0% 0% 100% 0% / 80% 99% 100% 100%;
+  align-items: center;
+}
+
+/* extra padding to keep my client's logo from being too close to the side of the page */
+
+
+.active {
+  background-color: #04AA6D;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+
+
+.spacer {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 9vh;
+
+}
+
+.layer1 {
+  background-image: url('images/layered-waves-haikei\ \(2\)-01.jpg');
+
+}
+
+/* To emulate the feeling of my clients work, i used an online tool to create an svg file i can use on
+ my page. I used a Pink-purple to lime green dradient and applied it to some wave shapes to mimic my 
+ clients squiggly and vibrant art  */
+
+.home img {
+  width: 100%;
+}
+
+/* illustrator image used for my home page */
+
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('images/AdobeStock_480045650.jpeg');
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 20px;
+  font-family: "Truculenta", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 125;
+}
+
+/* container that contains all font code as well as the space background. I chose this background because it also fits the space 
+aesthetic and the dark purple goes well with my gallery's translucent borders */
+
+.container .mural-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.container .mural-container .image {
+  height: 250px;
+  width: 30vh;
+  border: 10px solid rgba(149, 135, 197, 0.274);
+
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container .mural-container .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+
+.container .mural-container .image:hover img {
+  transform: scale(1.1);
+  transition: 1s ease;
+}
+
+.container .popup-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.521);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.container .popup-image span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 40px;
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.container .popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  width: 750px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .container .popup-image img {
+    width: 95%;
+  }
+}
+
+.gallery-text {
+  text-align: justify;
+}
+
+.container .collabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.container .collabs-container .image {
+  width: 30vh;
+  border: 10px solid rgba(149, 135, 197, 0.274);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container .collabs-container .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+
+.container .collabs-container .image:hover img {
+  transform: scale(1.1);
+  transition: 1s ease;
+}
+
+
+.container .prints-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.container .prints-container .image {
+  height: 250px;
+  width: 30vh;
+  border: 10px solid rgba(149, 135, 197, 0.274);
+
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container .prints-container .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+
+.container .prints-container .image:hover img {
+  transform: scale(1.1);
+  transition: 1s ease;
+}
+
+.row {
+  display: flex;
+}
+
+/* I created two columns for my image and text to fall into, staying alignerd with eachother and staying equal and using flex to make
+ sure theyre in line */
+.column {
+  flex: 50%;
+  padding: 10px;
+
+}
+
+.card-wrapper {
+  background-image: url('images/AdobeStock_480045650.jpeg');
+  background-position: bottom;
+  height: 100vh;
+  color: dimgray;
+  box-sizing: border-box;
+  padding: 5%;
+}
+
+.card-image {
+  width: 100%;
+  min-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  margin: 5%;
+}
+
+.card-image .right {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-image img {
+  width: 100vh;
+  max-width: 600px;
+  border-radius: 50% 0;
+  border: 10px solid rgba(63, 18, 209, 0.274);
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+
+/* to add stay in line with my clients visuals, i chose another unique border radius for her portrait. it's reminiscent 
+of a ufo, again further 'solidyfying the spaced-out' aesthetic */
+
+.card-image h1 {
+  font-size: xx-large;
+  font-family: "Truculenta", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: white;
+  margin: 0;
+}
+
+.card-image p {
+  font-size: 20px;
+  font-family: "Original Surfer", sans-serif;
+  font-variation-settings: "wdth" 125;
+  font-style: normal;
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+
+.card-image h3 {
+  font-size: larger;
+  font-family: "Truculenta", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 125;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 0;
+}
+
+body {
+  background-image: url('images/AdobeStock_480045650.jpeg');
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+form {
+  max-width: 420px;
+  margin: 50px auto;
+}
+
+.feedback-input {
+  color: rgba(255, 255, 255, 0.67);
+  font-family: "Original Surfer", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #e21616;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid #fb9f00;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  font-family: "Truculenta", sans-serif;
+  width: 100%;
+  background: #f900f164;
+  border-radius: 5px;
+  border: 3px rgba(48, 32, 110, 0.49) solid;
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+
+[type="submit"]:hover {
+  background: #087d2596;
+}
+
+footer {
+  background-color: #111;
+  background-image: url('images/footer\ stripes.png');
+  background-repeat: repeat-x;
+  font-family: "Truculenta", sans-serif;
+  font-style: normal;
+  flex-grow: 1;
+  max-width: 100%;
+
+
+}
+
+.footerContainer {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+}
+
+.socialIcons a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.socialIcons a i {
+  font-size: 2em;
+  color: black;
+}
+
+/* Hover affect on social media icon */
+.socialIcons a:hover {
+  background-color: #111;
+  transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+
+.footerNav {
+  margin: 30px 0;
+}
+
+.footerNav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.footerNav ul li a {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+
+}
+
+.footerNav ul li a:hover {
+  opacity: 1;
+}
+
+.footerBottom {
+  padding: 20px;
+  text-align: center;
+}
+
+.footerBottom p {
+  color: rgb(245, 230, 230);
+}
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+
+@media (max-width: 700px) {
+  .footerNav ul {
+    flex-direction: column;
+  }
+
+  .footerNav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .socialIcons a {
+    padding: 8px;
+    margin: 4px;
+  }
+}
